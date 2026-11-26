@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>LYT Store · Premium phones in Cambodia</title>
+  <meta name="description" content="LYT Store sells genuine iPhone, Samsung, Xiaomi and OPPO phones in Cambodia. Pay with ABA, KHQR or cash on delivery." />
+  <meta name="theme-color" content="#04060c" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/store.css" />
+  <script>
+    (function () {
+      var t = 'dark';
+      try { t = localStorage.getItem('lytstore_theme') || 'dark'; } catch (e) {}
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+</head>
+<body>
+  <div class="mesh" aria-hidden="true"><i class="m1"></i><i class="m2"></i><i class="m3"></i><i class="m4"></i><i class="m5"></i></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="site-header" id="siteHeader"></header>
+
+  <main id="app" class="app"></main>
+
+  <footer class="site-footer" id="siteFooter"></footer>
+
+  <nav class="tabbar" id="tabbar" aria-label="Quick navigation"></nav>
+  <div class="scrim" id="scrim" data-action="close-cart"></div>
+  <aside class="drawer glass" id="cartDrawer" aria-label="Shopping cart"></aside>
+  <div class="modal-root" id="modalRoot"></div>
+  <div class="toasts" id="toasts" aria-live="polite"></div>
+
+  <script src="js/util.js"></script>
+  <script src="js/art.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/db.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/admin.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      try { MS.start(); } catch (err) {
+        console.error(err);
+        document.getElementById('app').innerHTML = '<section class="container page-pad"><h2>Something went wrong</h2><p>Open the browser console for details.</p></section>';
+      }
+    });
+  </script>
+</body>
+</html>
